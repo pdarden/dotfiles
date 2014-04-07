@@ -6,6 +6,7 @@ call vundle#rc()
  
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
 
 " Color Schemes
 Bundle 'tomasr/molokai'

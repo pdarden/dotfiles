@@ -16,3 +16,8 @@ done
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim -u ~/.vimrc.bundles +PluginInstall +qall
+brew install tmux
+brew install reattach-to-user-namespace
+brew install ack
+brew install htop
+brew install tree

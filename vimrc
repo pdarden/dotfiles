@@ -57,7 +57,9 @@ set expandtab
 set list listchars=tab:»·,trail:·
  
 " Color scheme
-colorscheme molokai
+colorscheme solarized
+let g:solarized_termtrans = 1
+set background=dark
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
  
