@@ -53,11 +53,8 @@ plugins=(git rvm osx ruby zeus github)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/Users/parinda/.rvm/gems/ruby-2.1.1/bin:/Users/parinda/.rvm/gems/ruby-2.1.1@global/bin:/Users/parinda/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/parinda/.rvm/bin
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# Heroku
-export PATH="/usr/local/heroku/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
