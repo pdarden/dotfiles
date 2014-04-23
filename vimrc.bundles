@@ -38,6 +38,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tristen/vim-sparkup'
 Bundle 'mattn/emmet-vim'
 Bundle 'rizzatti/funcoo.vim'
+Bundle 'mileszs/ack.vim'
+Bundle '907th/vim-auto-save'
 
 Bundle 'mattn/webapi-vim'
 Bundle 'mmozuras/vim-github-comment'
