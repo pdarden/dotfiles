@@ -57,9 +57,9 @@ set expandtab
 set list listchars=tab:»·,trail:·
  
 " Color scheme
+set background=dark
 colorscheme solarized
 let g:solarized_termtrans = 1
-set background=dark
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
  
@@ -132,30 +132,40 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
- 
+
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
- 
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
- 
+
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
- 
+
 " NERDTree
 map <leader>k :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
- 
+
 " Tab Movement
 nnoremap <leader>] :tabnext<CR>
 nnoremap <leader>[ :tabprevious<CR>
- 
+
 " Show current highlight group
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
- 
+
 " For vim-github-comment
 let g:github_user = 'pdarden'
 let g:github_comment_open_browser = 1
+
+" Enable crosser
+hi CursorLine  cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=235
+set cursorline! cursorcolumn!
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" Autosave
+let g:auto_save = 1
+let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
