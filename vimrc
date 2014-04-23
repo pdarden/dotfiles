@@ -70,6 +70,7 @@ set clipboard+=unnamed
 set numberwidth=5
  
 " Allow switching between rel and abs number
+set number
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
