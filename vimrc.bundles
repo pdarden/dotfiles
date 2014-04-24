@@ -1,50 +1,51 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
- 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'gmarik/vundle'
+Plugin 'altercation/vim-colors-solarized'
 
 " Color Schemes
-Bundle 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 
 " Define bundles via Github repos
-Bundle 'danro/rename.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'nanki/treetop.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'timcharper/textile.vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'nono/vim-handlebars'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'vim-scripts/greplace.vim'
-Bundle 'xenoterracide/html.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/fakeclip'
-Bundle 'rking/ag.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-markdown'
-Bundle 'tristen/vim-sparkup'
-Bundle 'mattn/emmet-vim'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'mileszs/ack.vim'
-Bundle '907th/vim-auto-save'
+Plugin 'danro/rename.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nanki/treetop.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'timcharper/textile.vim'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'nono/vim-handlebars'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'vim-scripts/greplace.vim'
+Plugin 'xenoterracide/html.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/fakeclip'
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-markdown'
+Plugin 'tristen/vim-sparkup'
+Plugin 'mattn/emmet-vim'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'mileszs/ack.vim'
+Plugin '907th/vim-auto-save'
 
-Bundle 'mattn/webapi-vim'
-Bundle 'mmozuras/vim-github-comment'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mmozuras/vim-github-comment'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 
-filetype on
+call vundle#end()            " required
+filetype plugin indent on    " required
