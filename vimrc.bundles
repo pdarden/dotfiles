@@ -43,7 +43,6 @@ Plugin '907th/vim-auto-save'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mmozuras/vim-github-comment'
-Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
