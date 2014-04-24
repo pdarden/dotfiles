@@ -19,5 +19,6 @@ vim -u ~/.vimrc.bundles +PluginInstall +qall
 brew install tmux
 brew install reattach-to-user-namespace
 brew install ack
+brew install the_silver_searcher
 brew install htop
 brew install tree
