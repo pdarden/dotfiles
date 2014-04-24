@@ -14,7 +14,7 @@ for name in *; do
   fi
 done
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim -u ~/.vimrc.bundles +PluginInstall +qall
 brew install tmux
 brew install reattach-to-user-namespace
