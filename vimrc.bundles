@@ -6,10 +6,10 @@ call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'gmarik/vundle'
-Plugin 'altercation/vim-colors-solarized'
 
 " Color Schemes
 Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
 
 " Define bundles via Github repos
 Plugin 'danro/rename.vim'
