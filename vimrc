@@ -169,3 +169,6 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 " Autosave
 let g:auto_save = 1
 let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
+
+" Ag and Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
