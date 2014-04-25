@@ -40,6 +40,7 @@ Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/greper.vim'
 Plugin 'mileszs/ack.vim'
 Plugin '907th/vim-auto-save'
+Plugin 'tpope/vim-rake'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mmozuras/vim-github-comment'
