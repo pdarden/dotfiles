@@ -6,6 +6,10 @@ alias aliases='vim ~/.aliases'
 alias dotfiles="~/.dotfiles"
 alias cl='clear'
 alias dropbox='~/Dropbox'
+alias box='~/Box\ Sync'
+alias te='~/Workspace'
+alias exchange='~/Workspace/exchange && tmux new -s exchange'
+alias cheaptix='~/Workspace/cheaptickets && tmux new -s cheaptix'
 
 #RVM
 alias gemset="rvm gemset use"
@@ -16,16 +20,20 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # git
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
+alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
+alias gh='git hist'
 alias gk='gitk --all&'
 alias gx='gitx --all'
-alias got='git '
-alias get='git '
+alias gpoh='git push origin HEAD'
+alias gpfoh='git push -f origin HEAD'
+alias gpr='git pull --rebase'
+alias gprh='git pull --rebase origin HEAD'
+alias gprom='git pull --rebase origin master'
 
 # Misc
 alias cpwd='pwd | pbcopy'
@@ -35,6 +43,7 @@ alias tree="tree -C"
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
+alias grep='ggrep'
 
 # Tmux
 alias tk='tmux kill-session'
@@ -42,14 +51,13 @@ alias tk='tmux kill-session'
 # Rails
 alias create!="rake db:create"
 alias drop!="rake db:drop"
-alias MIGRATE!="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias MIGRATE!="rake db:migrate && rake db:rollback && rake db:migrate"
+alias migrate="rake db:migrate && db:rollback && rake db:migrate"
 alias seed!="rake db:seed"
 alias roll!="rake db:rollback"
 
 alias -g browse="hub browse"
 alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
-alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
 alias -g poop=pop
 alias -g assume_unchanged="update-index --assume-unchanged"
 
