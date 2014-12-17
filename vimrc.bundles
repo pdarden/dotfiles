@@ -6,10 +6,12 @@ call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'gmarik/vundle'
+Plugin 'altercation/vim-colors-solarized'
 
 " Color Schemes
 Plugin 'tomasr/molokai'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
+Plugin 'Lokaltog/vim-distinguished'
 
 " Define bundles via Github repos
 Plugin 'danro/rename.vim'
@@ -26,6 +28,9 @@ Plugin 'tpope/vim-haml'
 Plugin 'nono/vim-handlebars'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/greplace.vim'
 Plugin 'xenoterracide/html.vim'
@@ -40,12 +45,14 @@ Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/greper.vim'
 Plugin 'mileszs/ack.vim'
 Plugin '907th/vim-auto-save'
-Plugin 'tpope/vim-rake'
+Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mmozuras/vim-github-comment'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+Plugin 'richsoni/vim-ecliptic'
+Plugin 'elzr/vim-json'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
