@@ -1,5 +1,7 @@
 # Ignore bundler config.
 /.bundle
+/bundle
+/path
  
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -22,3 +24,8 @@ tags
 .tags_sorted_by_file
 .env
 /config/database.yml
+api_request*
+api_analysis*
+node_modules/
+.todo
+.s3cfg
