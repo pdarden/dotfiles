@@ -1,14 +1,14 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.nvim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'gmarik/vundle'
-Plugin 'altercation/vim-colors-solarized'
 
 " Color Schemes
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'Lokaltog/vim-distinguished'
@@ -48,10 +48,8 @@ Plugin '907th/vim-auto-save'
 Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'mattn/webapi-vim'
-Plugin 'mmozuras/vim-github-comment'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'richsoni/vim-ecliptic'
 Plugin 'elzr/vim-json'
 
 call vundle#end()            " required

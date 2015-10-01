@@ -23,9 +23,6 @@ tags
 .tags
 .tags_sorted_by_file
 .env
-/config/database.yml
-api_request*
-api_analysis*
 node_modules/
 .todo
 .s3cfg

@@ -1,23 +1,27 @@
 # Vundle
-alias vundle='vim -u ~/.vimrc.bundles +PluginInstall +qall'
+alias vundle='nvim -u ~/.nvimrc.bundles +PluginInstall +qall'
 
 # Shortcuts
-alias aliases='vim ~/.aliases'
-alias dotfiles="~/.dotfiles"
+alias aliases='nvim ~/.aliases'
 alias cl='clear'
-alias dropbox='~/Dropbox'
+alias dbox='~/Dropbox'
 alias box='~/Box\ Sync'
-alias te='~/Workspace'
-alias exchange='~/Workspace/exchange && tmux new -s exchange'
-alias cheaptix='~/Workspace/cheaptickets && tmux new -s cheaptix'
+alias dotfiles='~/Dropbox/dotfiles'
+alias vi='nvim'
+alias tree="tree -C"
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias grep='ggrep'
+alias -g browse="hub browse"
 
-#RVM
-alias gemset="rvm gemset use"
+# Tmux
+alias tk='tmux kill-session'
 
 # ZSH
 alias reload="source ~/.zshrc"
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 # git
 alias gs='git status'
@@ -34,19 +38,14 @@ alias gpfoh='git push -f origin HEAD'
 alias gpr='git pull --rebase'
 alias gprh='git pull --rebase origin HEAD'
 alias gprom='git pull --rebase origin master'
+alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
+alias -g poop=pop
+alias -g assume_unchanged="update-index --assume-unchanged"
 
-# Misc
-alias cpwd='pwd | pbcopy'
-alias subl='open -a "/Applications/Sublime Text.app"'
-alias atom='open -a "/Applications/Atom.app"'
-alias tree="tree -C"
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
-alias grep='ggrep'
-
-# Tmux
-alias tk='tmux kill-session'
+# Database
+alias startpg="postgres -D /usr/local/var/postgres"
+alias startredis="redis-server /usr/local/etc/redis.conf"
+alias startmongo="mongod --config /usr/local/etc/mongod.conf"
 
 # Rails
 alias create!="rake db:create"
@@ -55,128 +54,16 @@ alias MIGRATE!="rake db:migrate && rake db:rollback && rake db:migrate"
 alias migrate="rake db:migrate && db:rollback && rake db:migrate"
 alias seed!="rake db:seed"
 alias roll!="rake db:rollback"
-
-alias -g browse="hub browse"
-alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
-alias -g poop=pop
-alias -g assume_unchanged="update-index --assume-unchanged"
-
-payload() {
-  if [[ $1 == "push" ]] && [[ -n "$2" ]]; then
-    echo "Pushing to $2"
-    command git subtree push --prefix vendor/assets/stylesheets/payload payload $2;
-  elif [[ $1 == "pull" ]] && [[ -n "$2" ]]; then
-    echo "Pulling from $2"
-    command git subtree pull --prefix vendor/assets/stylesheets/payload payload $2 --squash;
-  else
-    echo "Try again. 'payload <push/pull> <branch>'. Branch name should match project name."
-  fi;
-}
-
 alias cpdatabase="cp config/database.example.yml config/database.yml"
 
 function rails_new() {
   rails new $1 -T -B -d=postgresql &&
   cd $1 &&
-  echo "populating gemfiles" &&
-  populate_gemfile &&
-  echo "populating ruby gemset file" &&
-  populate_ruby_gemset_file $1 &&
   echo "populating ruby version file" &&
   populate_ruby_version_file &&
-  cd .. && cd $1 &&
-  echo "completing secret token process" &&
-  secret_token_process $1 &&
-  bundle install &&
-  echo "installing rspec" &&
-  rails generate rspec:install &&
-  echo "require 'capybara/rspec'" >> spec/spec_helper.rb &&
-  echo "require 'valid_attribute'" >> spec/spec_helper.rb &&
-  echo "--format NyanCatFormatter" >> .rspec &&
-  echo "creating folders for specs and factories" &&
-  create_folders &&
-  echo "copying and fixing database.yml file"
-  mv config/database.yml config/database.example.yml &&
-  fix_database_example_yml_file $1 && 
-  cpdatabase &&
-  echo "config/database.yml" >> .gitignore &&
-  git_init_add_commit
-}
-
-function populate_gemfile() {
-  echo "gem 'haml'" >> Gemfile &&
-  echo "gem 'simple_form'" >> Gemfile &&
-  echo "" >> Gemfile &&
-  echo "group :test do" >> Gemfile &&
-  echo "  gem 'factory_girl_rails'" >> Gemfile &&
-  echo "end" >> Gemfile &&
-  echo "" >> Gemfile &&
-  echo "group :test, :development do" >> Gemfile &&
-  echo "  gem 'rspec-rails'" >> Gemfile &&
-  echo "  gem 'pry-rails'" >> Gemfile &&
-  echo "  gem 'launchy'" >> Gemfile &&
-  echo "  gem 'valid_attribute'" >> Gemfile &&
-  echo "  gem 'shoulda-matchers'" >> Gemfile &&
-  echo "  gem 'capybara'" >> Gemfile &&
-  echo "  gem 'nyan-cat-formatter'" >> Gemfile &&
-  echo "end" >> Gemfile &&
-  echo "" >> Gemfile &&
-  echo "group :development do" >> Gemfile &&
-  echo "  gem 'quiet_assets'" >> Gemfile &&
-  echo "  gem 'meta_request'" >> Gemfile &&
-  echo "  gem 'better_errors'" >> Gemfile &&
-  echo "  gem 'binding_of_caller'" >> Gemfile &&
-  echo "end" >> Gemfile &&
-  echo "" >> Gemfile &&
-  echo "group :production do" >> Gemfile &&
-  echo "  gem 'rails_12factor'" >> Gemfile &&
-  echo "end" >> Gemfile
-}
-
-function populate_ruby_gemset_file() {
-  echo $1 >> .ruby-gemset
+  cd .. && cd $1
 }
 
 function populate_ruby_version_file() {
   ruby -v | cut -d ' ' -f 2 | cut -d p -f 1 >> .ruby-version
-}
-
-function git_init_add_commit() {
-  git init &&
-  git add . &&
-  git commit -m "Initial commit"
-}
-
-function secret_token_process() {
-  echo ".secret" >> .gitignore &&
-  cd config/initializers
-  rm -f secret_token.rb &&
-  touch secret_token.rb &&
-  echo "require 'securerandom'" >> secret_token.rb &&
-  echo "def secure_token" >> secret_token.rb &&
-  echo "  token_file = Rails.root.join('.secret')" >> secret_token.rb &&
-  echo "  if File.exist?(token_file)" >> secret_token.rb &&
-  echo "    File.read(token_file).chomp" >> secret_token.rb &&
-  echo "  else" >> secret_token.rb &&
-  echo "    token = SecureRandom.hex(64)" >> secret_token.rb &&
-  echo "    File.write(token_file, token)" >> secret_token.rb &&
-  echo "    token" >> secret_token.rb &&
-  echo "  end" >> secret_token.rb &&
-  echo "end" >> secret_token.rb &&
-  convert_filename_to_camelcase $1 >> secret_token.rb &&
-  echo "::Application.config.secret_key_base = secure_token" >> secret_token.rb &&
-  cd ../..
-}
-
-function convert_filename_to_camelcase() {
-  echo -n $1 | ruby -e "print STDIN.gets.split('_').map(&:capitalize).join"
-}
-
-function fix_database_example_yml_file() {
-  sed -i '' "s/\(username:\) $1/\1/" config/database.example.yml
-}
-
-function create_folders() {
-  mkdir spec/features &&
-  mkdir spec/factories
 }

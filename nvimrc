@@ -20,8 +20,8 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+if filereadable(expand("~/.nvimrc.bundles"))
+  source ~/.nvimrc.bundles
 endif
 
 filetype plugin indent on
@@ -61,9 +61,7 @@ set list listchars=tab:»·,trail:·
 
 " Color scheme
 set background=dark
-"colorscheme distinguished
 colorscheme gruvbox
-"let g:solarized_termtrans = 1
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -151,13 +149,9 @@ nnoremap <leader>[ :tabprevious<CR>
 " Show current highlight group
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
-" For vim-github-comment
-let g:github_user = 'pdarden'
-let g:github_comment_open_browser = 1
-
 " Enable crosser
 "hi CursorLine  cterm=NONE ctermbg=234
-set cursorline!
+"set cursorline!
 "nnoremap <Leader>c :set cursorline!<CR>
 
 " Autosave
@@ -174,7 +168,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 hi Search cterm=NONE ctermbg=116
 
 " Rich's future plugin
-let g:ecliptic_prefix = '-'
+"let g:ecliptic_prefix = '-'
 
 " MISC
 let g:ctrlp_custom_ignore = 'node_modules'
