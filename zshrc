@@ -15,9 +15,9 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-export EDITOR='vim'
-export VISUAL='vim'
-export GIT_EDITOR='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export GIT_EDITOR='nvim'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
