@@ -17,11 +17,11 @@ for name in *; do
   fi
 done
 
-brew install git tmux reattach-to-user-namespace ack the_silver_searcher htop tree imagemagick node ctags hub redis mongodb chruby ruby-build gdbm libffi libyaml
+brew install git gdbm libffi libyaml tmux reattach-to-user-namespace ack the_silver_searcher htop tree imagemagick node ctags hub redis mongodb chruby ruby-build
 brew install postgresql --no-python
 brew tap Goles/battery
 brew install battery
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
 nvim -u ~/.nvimrc.bundles +PluginInstall +qall
 mkdir ~/.rubies
-ruby-build 2.2.3 ~/.rubies/2.2.3
+npm install -g n
