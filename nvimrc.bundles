@@ -46,7 +46,7 @@ Plugin 'rizzatti/greper.vim'
 Plugin 'mileszs/ack.vim'
 Plugin '907th/vim-auto-save'
 Plugin 'mustache/vim-mustache-handlebars'
-
+Plugin 'mxw/vim-jsx'
 Plugin 'mattn/webapi-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'

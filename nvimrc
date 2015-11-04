@@ -173,3 +173,5 @@ hi Search cterm=NONE ctermbg=116
 " MISC
 let g:ctrlp_custom_ignore = 'node_modules'
 let g:mustache_abbreviations = 1
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:syntastic_javascript_checkers = ['eslint']

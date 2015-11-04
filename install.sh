@@ -24,4 +24,4 @@ brew install battery
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
 nvim -u ~/.nvimrc.bundles +PluginInstall +qall
 mkdir ~/.rubies
-npm install -g n
+npm install -g n eslint babel-eslint eslint-plugin-react
