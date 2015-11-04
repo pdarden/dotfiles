@@ -9,7 +9,7 @@
 2. In your terminal run <code>install.sh</code> in the dotfiles directory.
 
 ###What you'll get:
-* My aliases, gemrc, gitconfig, and gitignore stuff, `.aliases`, `.gitconfig`, `.gitignore`, `.gemrc`
+* My aliases, gemrc, eslintrc, gitconfig, and gitignore stuff, `.aliases`, `.gitconfig`, `.gitignore`, `.gemrc`, `.eslintrc`
 * [neovim](https://neovim.io/) and its configurations, `.nvimrc`
 * [vundle](https://github.com/VundleVim/Vundle.vim) and all the vim plugins in `.nvimrc.bundles`
 * [Oh-My-Zsh](http://ohmyz.sh/) and its configurations, `.zshrc`
