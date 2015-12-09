@@ -21,6 +21,7 @@ brew install git gdbm libffi libyaml tmux reattach-to-user-namespace ack the_sil
 brew install postgresql --no-python
 brew tap Goles/battery
 brew install battery
+brew cask install easysimbl
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
 nvim -u ~/.nvimrc.bundles +PluginInstall +qall
 mkdir ~/.rubies
