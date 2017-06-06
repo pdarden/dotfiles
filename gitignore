@@ -2,15 +2,15 @@
 /.bundle
 /bundle
 /path
- 
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
- 
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
- 
+
 # Ignore other unneeded files.
 doc/
 *.swp
@@ -25,4 +25,8 @@ tags
 .env
 node_modules/
 .todo
-.s3cfg
+.gitconfig
+.gem
+coverage
+db/structure.sql
+npm-debug.log

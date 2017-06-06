@@ -1,10 +1,9 @@
 [user]
-	name = Parinda Darden
-	email = parinda.darden@gmail.com
+	name = <Your Name>
+	email = <Your email>
 
 [alias]
   br = branch
-  ;hist = log --pretty=format:'%Cgreen%h%Creset %ad | %s%Cred%d%Creset [%an]' --graph --date=short
   hist = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   type = cat-file -t
   dump = cat-file -p
@@ -40,14 +39,6 @@
 
 [push]
   default = simple
-
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 
 [filter "media"]
 	clean = git-media-clean %f

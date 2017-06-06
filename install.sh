@@ -1,7 +1,10 @@
 #!/bin/sh
 
-brew tap neovim/neovim
-brew install --HEAD neovim
+brew tap caskroom/fonts
+brew cask install font-source-code-pro-for-powerline
+brew install neovim/neovim/neovim
+brew install fish
+/usr/local/bin/fish to /etc/shells
 
 for name in *; do
   target="$HOME/.$name"
@@ -17,12 +20,16 @@ for name in *; do
   fi
 done
 
-brew install git gdbm libffi libyaml tmux reattach-to-user-namespace ack the_silver_searcher htop tree imagemagick node ctags hub redis mongodb chruby ruby-build
-brew install postgresql --no-python
+brew install git tmux reattach-to-user-namespace ag htop tree ctags hub direnv fzf coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc
 brew tap Goles/battery
 brew install battery
-brew cask install easysimbl
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
-nvim -u ~/.nvimrc.bundles +PluginInstall +qall
-mkdir ~/.rubies
-npm install -g n eslint babel-eslint eslint-plugin-react
+/usr/local/opt/fzf/install
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
+echo 'source ~/.asdf/asdf.fish' >> ~/.config/fish/config.fish
+mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \                                                                                      Mon Jun  5 23:57:47 2017
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir -p ~/.config/nvim/plugged
+omf install bobthefish direnv fzf spark wifi-password
+nvim -u ~/.config/nvim/init.vim +PluginInstall +qall
+omf reload
