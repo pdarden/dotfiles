@@ -5,7 +5,6 @@ brew cask install font-source-code-pro-for-powerline
 brew install neovim/neovim/neovim
 pip3 install neovim
 brew install fish
-/usr/local/bin/fish to /etc/shells
 
 for name in *; do
   target="$HOME/.$name"
