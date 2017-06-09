@@ -28,7 +28,8 @@ set expandtab
 set shiftwidth=2
 " 2 lines of context below and above all the time
 set scrolloff=2
-
+" Use system clipboard
+set clipboard=unnamed
 
 """ Format Options #format-options
 set formatoptions=tcrq
@@ -155,6 +156,7 @@ Plug 'sjl/gundo.vim'
 
 """ UI Plugins #ui-plugins
 Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-solarized8'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -239,7 +241,7 @@ if (empty($TMUX))
 endif
 set background=dark
 syntax enable
-colorscheme gruvbox
+colorscheme solarized8_dark
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
