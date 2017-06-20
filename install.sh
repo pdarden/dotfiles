@@ -20,7 +20,7 @@ for name in *; do
   fi
 done
 
-brew install git tmux reattach-to-user-namespace ag htop tree ctags hub direnv fzf coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc
+brew install git tmux reattach-to-user-namespace ag htop tree ctags hub direnv fzf coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc jq
 brew tap Goles/battery
 brew install battery
 /usr/local/opt/fzf/install
