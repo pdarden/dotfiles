@@ -361,5 +361,6 @@ nnoremap <leader>] :tabnext<cr>
 
 " NERDTree
 map <leader>k :NERDTreeToggle<cr>
+map <leader>f :NERDTreeFind<cr>
 let NERDTreeShowHidden=1
 """ End Navigation ==================
