@@ -1,6 +1,6 @@
 [user]
-	name = <Your Name>
-	email = <Your email>
+  name = <Your Name>
+  email = <Your email>
 
 [alias]
   br = branch
@@ -31,7 +31,7 @@
   deleted = red bold
 
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
   editor = nvim -f
 
 [credential]
@@ -41,5 +41,5 @@
   default = simple
 
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f

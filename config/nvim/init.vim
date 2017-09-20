@@ -156,7 +156,7 @@ Plug 'sjl/gundo.vim'
 
 """ UI Plugins #ui-plugins
 Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-solarized8'
+Plug 'sickill/vim-monokai'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -241,7 +241,7 @@ if (empty($TMUX))
 endif
 set background=dark
 syntax enable
-colorscheme solarized8_dark
+colorscheme gruvbox
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 

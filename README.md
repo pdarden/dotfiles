@@ -4,9 +4,8 @@
 
 ### Installation
 1. <code>git clone https://github.com/pdarden/dotfiles.git</code>
-2. In your terminal run <code>install.sh</code> in the dotfiles directory.
-3. Set fish as your default shell: Add `/usr/local/bin/fish` to `/etc/shells` then change default shell.
-4. Change your name and email in `~/.gitconfig`
+2. In your terminal run <code>bash install.sh</code> in the dotfiles directory.
+3. Change your name and email in `~/.gitconfig`
 
 ### What you'll get:
 * My gitconfig, and gitignore stuff, `.gitconfig`, `.gitignore`
