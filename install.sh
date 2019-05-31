@@ -3,8 +3,6 @@
 brew tap caskroom/fonts
 brew cask install font-source-code-pro-for-powerline
 brew install fish git tmux reattach-to-user-namespace ag htop tree ctags hub direnv fzf coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc jq pyenv zlib
-brew tap Goles/battery
-brew install battery
 
 sudo echo '/usr/local/bin/fish' >> /etc/shells
 chsh -s `which fish`
