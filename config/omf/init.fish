@@ -57,7 +57,7 @@ function gproh
 end
 
 function gprom
-  git pull --rebase origin master
+  git pull --rebase origin main
 end
 ### end git ########
 
@@ -73,7 +73,7 @@ function vi
   nvim $argv
 end
 
-source ~/.fzf/shell/key-bindings.fish
+fzf_key_bindings
 
 # direnv
 eval (direnv hook fish)

@@ -12,7 +12,8 @@
 * [neovim](https://neovim.io/) and its configurations, `.nvimrc`
 * [vim-plug](https://github.com/junegunn/vim-plug) and all the vim plugins in `~/.config/nvim/plugged`
 * [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) and its configurations, `~/.config/omf/init.fish`
-* Source Code Pro for Powerline fonts
+* Hack Nerd Fonts for Powerline font
+* Source Code Pro for terminal font
 * [tmux](https://tmux.github.io/) and its configurations, `.tmux.conf`
 * [ag](http://brewformulas.org/Ag)
 * [htop](http://hisham.hm/htop/)
@@ -26,26 +27,24 @@
 ### Recommended Apps
 * [1Password](https://www.1password.com/)
 * [Alfred](https://www.alfredapp.com/)
-* [Balsamiq](https://balsamiq.com/)
-* [Box Sync](https://www.box.com/)
+* [Around](https://around.co)
+* [Brave](https://brave.com/)
 * [Chrome](http://www.google.com/chrome/)
 * [Dash](https://kapeli.com/dash)
+* [DBeaver](https://dbeaver.io/)
 * [Docker](https://docs.docker.com/docker-for-mac/install/)
 * [Dropbox](https://www.dropbox.com/)
 * [Fantastical](https://flexibits.com/fantastical)
+* [Figma](https://www.figma.com/)
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-* [Flux](https://justgetflux.com/)
 * [GitKraken](https://www.gitkraken.com)
 * [Heroku toolbelt](https://toolbelt.heroku.com/)
 * [iTerm](https://www.iterm2.com/)
-* [Pocket](https://getpocket.com)
 * [Spectacle](https://www.spectacleapp.com/)
-* [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/) for people who can't use vim
 * [Notion.so](https://notion.so/)
-* [Postico](https://eggerapps.at/postico/)
-* [Screenhero](https://screenhero.com/)
 * [Slack](https://slack.com)
 * [Spotify](https://www.spotify.com/download/mac/)
+* [Zoom](https://zoom.us/)
 
 ### Font
-* [Dank Mono](https://dank.sh/releases/)
+* [Dank Mono](https://dank.sh)

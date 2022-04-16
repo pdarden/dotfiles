@@ -5,8 +5,7 @@ scriptencoding utf-8
 " 1) Basics #basics
 "   1.1) Tabs #tabs
 "   1.2) Format Options #format-options
-"   1.3) Leader #leader
-"   1.4) Omni #omni
+"   1.3) Leader #leader "   1.4) Omni #omni
 "   1.5) UI Basics #ui-basics
 " 2) Plugins #plugins
 "   2.1) Filetypes #filetypes
@@ -99,9 +98,7 @@ Plug 'ElmCast/elm-vim'
 """ Utilities #utilities
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
-  if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
-  endif
+
   " use tab for completion
   inoremap <expr><Tab> pumvisible() ? "\<c-n>" : "\<Tab>"
   inoremap <expr><S-Tab> pumvisible() ? "\<c-p>" : "\<S-Tab>"
@@ -155,8 +152,7 @@ Plug 'sjl/gundo.vim'
   nnoremap <F5> :GundoToggle<CR>
 
 """ UI Plugins #ui-plugins
-Plug 'morhetz/gruvbox'
-Plug 'sickill/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -240,8 +236,8 @@ if (empty($TMUX))
   endif
 endif
 set background=dark
+colorscheme solarized
 syntax enable
-colorscheme gruvbox
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
