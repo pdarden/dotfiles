@@ -73,6 +73,10 @@ function vi
   nvim $argv
 end
 
+function dc
+  docker-compose $argv
+end
+
 fzf_key_bindings
 
 # direnv
