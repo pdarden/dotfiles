@@ -23,6 +23,8 @@
 * [asdf](https://github.com/asdf-vm/asdf)
 * [postgresql](http://brewformulas.org/Postgresql)
 * [battery](https://github.com/Goles/Battery)
+* [Heroku CLI](https://toolbelt.heroku.com/)
+* [Gigalixir CLI](https://gigalixir.com/)
 
 ### Recommended Apps
 * [1Password](https://www.1password.com/)
@@ -38,7 +40,6 @@
 * [Figma](https://www.figma.com/)
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 * [GitKraken](https://www.gitkraken.com)
-* [Heroku toolbelt](https://toolbelt.heroku.com/)
 * [iTerm](https://www.iterm2.com/)
 * [Spectacle](https://www.spectacleapp.com/)
 * [Notion.so](https://notion.so/)
