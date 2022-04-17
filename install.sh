@@ -1,8 +1,9 @@
 #!/bin/sh
 brew tap Goles/battery
 brew tap homebrew/cask-fonts && brew install --cask font-source-code-pro && brew install --cask font-hack-nerd-font
+brew tap heroku/brew
 
-brew install fish git tmux reattach-to-user-namespace asdf svn ag htop tree ctags hub direnv fzf coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc jq pyenv zlib gpg gawk spark battery
+brew install fish git tmux reattach-to-user-namespace asdf svn ag htop tree ctags hub direnv fzf coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc jq pyenv zlib gpg gawk spark battery heroku
 
 
 sudo echo '/usr/local/bin/fish' >> /etc/shells
