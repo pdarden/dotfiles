@@ -4,11 +4,15 @@
 
 ### Installation
 1. <code>git clone https://github.com/pdarden/dotfiles.git</code>
-2. In your terminal run <code>bash install.sh</code> in the dotfiles directory.
-3. Change your name and email in `~/.gitconfig`
+1. In your terminal run <code>bash install.sh</code> in the dotfiles directory.
+1. Change your name and email in `~/.gitconfig`
+1. Change your ssh config in `~/.ssh/config`
+1. Set Source Code Pro as your terminal font.  In iTerm, you can use separate
+font for powerline, use Hack Nerd Font.
 
 ### What you'll get:
 * My gitconfig, and gitignore stuff, `.gitconfig`, `.gitignore`
+* Example of using different ssh keys in `.ssh/config`
 * [neovim](https://neovim.io/) and its configurations, `.nvimrc`
 * [vim-plug](https://github.com/junegunn/vim-plug) and all the vim plugins in `~/.config/nvim/plugged`
 * [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) and its configurations, `~/.config/omf/init.fish`

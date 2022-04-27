@@ -4,7 +4,8 @@ set -x VISUAL "nvim -f"
 set -x GIT_EDITOR "nvim -f"
 set -x CUCUMBER_FORMAT pretty
 set -g theme_display_ruby no
-set -g theme_nerd_fonts no
+set -g theme_powerline_fonts no
+set -g theme_nerd_fonts yes
 
 # Shortcuts
 
@@ -77,7 +78,12 @@ function dc
   docker-compose $argv
 end
 
+function refresh_ssh
+  eval (ssh-agent -c)
+end
+
 fzf_key_bindings
+
 
 # direnv
 eval (direnv hook fish)

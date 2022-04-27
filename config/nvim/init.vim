@@ -52,6 +52,9 @@ set mouse=a
 " super slow.
 " set cursorline
 " set cursorcolumn
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Highlight search results
 set hlsearch
@@ -184,36 +187,12 @@ Plug 'dietsche/vim-lastplace'
 
 " Execute code checks, find mistakes, in the background
 Plug 'neomake/neomake'
-  " Run Neomake when I save any buffer
-  augroup localneomake
-    autocmd! BufWritePost * Neomake
-  augroup END
+  ""Run Neomake when I save any buffer
+  "augroup localneomake
+    "autocmd! BufWritePost * Neomake
+  "augroup END
 
-  " Configure a nice credo setup, courtesy https://github.com/neomake/neomake/pull/300
   let g:neomake_elixir_enabled_makers = ['mix', 'mycredo']
-  function! NeomakeCredoErrorType(entry)
-    if a:entry.type ==# 'F'      " Refactoring opportunities
-      let l:type = 'W'
-    elseif a:entry.type ==# 'D'  " Software design suggestions
-      let l:type = 'I'
-    elseif a:entry.type ==# 'W'  " Warnings
-      let l:type = 'W'
-    elseif a:entry.type ==# 'R'  " Readability suggestions
-      let l:type = 'I'
-    elseif a:entry.type ==# 'C'  " Convention violation
-      let l:type = 'W'
-    else
-      let l:type = 'M'           " Everything else is a message
-    endif
-    let a:entry.type = l:type
-  endfunction
-
-  let g:neomake_elixir_mycredo_maker = {
-        \ 'exe': 'mix',
-        \ 'args': ['credo', 'list', '%:p', '--format=oneline'],
-        \ 'errorformat': '[%t] %. %f:%l:%c %m,[%t] %. %f:%l %m',
-        \ 'postprocess': function('NeomakeCredoErrorType')
-        \ }
 
 " Easily manage tags files
 Plug 'ludovicchabant/vim-gutentags'
