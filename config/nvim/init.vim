@@ -170,7 +170,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 """ Code Navigation #code-navigation
 " fzf fuzzy finder
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
   let g:fzf_layout = { 'window': 'enew' }
   let $FZF_DEFAULT_COMMAND = 'ag -g ""'
