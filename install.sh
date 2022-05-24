@@ -1,15 +1,16 @@
 #!/bin/sh
 brew tap Goles/battery
-brew tap homebrew/cask-fonts && brew install --cask font-source-code-pro && brew install --cask font-hack-nerd-font
+brew tap homebrew/cask-fonts
 brew tap heroku/brew
 brew tap gigalixir/brew
-
 brew install fish git tmux reattach-to-user-namespace asdf svn ag htop tree ctags hub direnv fzf coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc jq pyenv zlib gpg gawk spark battery heroku gigalixir
+brew install --cask font-source-code-pro && brew install --cask font-hack-nerd-font
 
-
-sudo echo '/usr/local/bin/fish' >> /etc/shells
+sudo echo "$(brew --prefix fish)" >> /etc/shells
 chsh -s `which fish`
 
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
 
 for name in *; do
   target="$HOME/.$name"
@@ -27,7 +28,7 @@ done
 
 echo -e "\nsource "(brew --prefix asdf)"/libexec/asdf.fish" >> ~/.config/fish/config.fish
 
-/usr/local/opt/fzf/install
+eval (brew --prefix fzf)/install
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -49,6 +50,7 @@ brew install neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 mkdir -p ~/.config/nvim/plugged
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 omf install bobthefish direnv fzf wifi-password
 omf reload
 nvim -u ~/.config/nvim/init.vim +PlugInstall +qall
